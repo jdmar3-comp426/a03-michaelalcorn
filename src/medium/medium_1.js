@@ -9,7 +9,7 @@ import {variance} from "./data/stats_helpers.js";
  */
 export function getSum(array) {
     let answer = 0;
-    for (i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         answer+=array[i];
     }
     return answer;
@@ -27,12 +27,14 @@ export function getSum(array) {
  */
 export function getMedian(array) {
     array.sort();
-    length = array.length;
+    let length = array.length;
     if (length % 2 == 0) {
-        return array[length/2];
+        let index = (array.length / 2) - .5;
+        let lower = array[Math.floor(index)];
+        let higher = array[Math.ceil(index)];
+        return ((array[higher] + array[lower]) / 2);
     } else {
-        // CODE ODD MEDIAN
-    return getSum(array) / array.length;
+        return array[Math.ceil(length/2)];
     }
 }
 
@@ -56,6 +58,8 @@ export function getMedian(array) {
  }
  */
 export function getStatistics(array) {
-
+return {length: array.length, sum: getSum(array), mean: (getSum(array) / array.length), median: getMedian(array), 
+        min: Math.min(...array), max: Math.max(...array), variance: variance(array,(getSum(array) / array.length)), 
+        standard_deviation: (Math.sqrt(variance(array,(getSum(array) / array.length))))}
 }
 

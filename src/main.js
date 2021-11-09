@@ -1,4 +1,4 @@
 import{
-    identifyArray
-}from "./mild/mild_2.js"
-console.log(identifyArray(['some', 3, [3, 4], false]));
+    getStatistics
+}from "./medium/medium_1.js"
+console.log(getStatistics([3,2,4,5,5,5,2,6,7]));
