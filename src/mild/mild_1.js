@@ -26,7 +26,7 @@ return a + " + " + b + " = " + result;
  */
 export function getIncreasingArray(startNumber, endNumber) {
     let result = [];
-    for (let i = 0; i < (endNumber - startNumber); i++) {   
+    for (let i = 0; i <= (endNumber - startNumber); i++) {   
         result.push(startNumber + i);
     }
     return result;
@@ -40,7 +40,7 @@ export function getIncreasingArray(startNumber, endNumber) {
  * and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
  */
 export function maxAndMin(numbers) {
-    return {min: Math.min(...numbers), max: Math.max(...numbers)};
+    return { max: Math.max(...numbers), min: Math.min(...numbers)};
 }
 
 /**
