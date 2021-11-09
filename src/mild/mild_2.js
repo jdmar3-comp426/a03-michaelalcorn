@@ -96,5 +96,9 @@ return newObject;
  * @return {*} The object with its keys removed.
  */
 export function removeKeys(object, keyList) {
-
+   let answer = {...object};
+for (let i = 0; i < keyList.length; i++) {
+   removeKey(answer, keyList[i]);
+}
+return answer; 
 }
