@@ -34,7 +34,7 @@ export function getMedian(array) {
         let higher = array[Math.ceil(index)];
         return ((array[higher] + array[lower]) / 2);
     } else {
-        return array[Math.ceil(length/2)];
+        return array[Math.floor(length/2)];
     }
 }
 
