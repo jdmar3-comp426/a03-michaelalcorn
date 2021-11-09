@@ -1,4 +1,4 @@
 import{
-    getStatistics
+    getMedian
 }from "./medium/medium_1.js"
-console.log(getStatistics([3,2,4,5,5,5,2,6,7]));
+console.log(getMedian([1,2,3,4,5,5,5]));

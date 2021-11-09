@@ -32,7 +32,7 @@ export function getMedian(array) {
         let index = (array.length / 2) - .5;
         let lower = array[Math.floor(index)];
         let higher = array[Math.ceil(index)];
-        return ((array[higher] + array[lower]) / 2);
+        return ((higher + lower) / 2);
     } else {
         return array[Math.floor(length/2)];
     }
