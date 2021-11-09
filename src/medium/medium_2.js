@@ -67,9 +67,12 @@ export const allCarStats = {
  *       "2011 BMW ActiveHybrid 750Li Sedan"
  *     ]
  *}]
- *
- *
- *
+ *  
+ **/
+// filter out hybrids
+export const hybrids = mpg_data.filter(car => car.hybrid);
+
+/**
  *
  * @param {moreStats.avgMpgByYearAndHybrid} Object where keys are years and each year
  * an object with keys for `hybrid` and `notHybrid`. The hybrid and notHybrid

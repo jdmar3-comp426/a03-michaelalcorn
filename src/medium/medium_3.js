@@ -17,8 +17,21 @@ queries.
  * sorted by horsepower in descending order.
  *
  */
-export function searchHighPower(car_data, minHorsepower, minTorque) {
+ function GetSortOrder(prop) {    
+    return function(a, b) {    
+        if (a[prop] < b[prop]) {    
+            return 1;    
+        } else if (a[prop] > b[prop]) {    
+            return -1;    
+        }    
+        return 0;    
+    }    
+}    
 
+export function searchHighPower(car_data, minHorsepower, minTorque) {
+    let highPower = car_data.filter(car => (car.horsepower >= minHorsepower)&&(car.torque >= minTorque));
+    highPower.sort(GetSortOrder("horsepower"));
+    return highPower;
 }
 
 
