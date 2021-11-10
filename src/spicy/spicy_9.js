@@ -32,7 +32,7 @@ export const log = (x) => {
     return x;
 }
 export const repeatDemo = () => {
-   repeat(log, 10, "Hello world!");
+   repeat(log, 10, "Hello, world!");
 };
 
 
