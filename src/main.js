@@ -22,7 +22,7 @@ import {
     someEven,
     everyEven
 } from "./spicy/spicy_9.js"
-repeatDemo;
+repeatDemo();
 // console.log(multiplyBy(3)(5));
 // console.log(tenTimes(9));
 // console.log(tenTimesFifty())

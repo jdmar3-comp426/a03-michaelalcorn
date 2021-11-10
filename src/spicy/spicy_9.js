@@ -27,9 +27,12 @@ return answer;
  * Use the repeat function to log the string "Hello, world!" to the console
  *   10 times.
  */
-
+export const log = (x) => {
+    console.log(x);
+    return x;
+}
 export const repeatDemo = () => {
-    repeat(log(), 10, "Hello World!");
+   repeat(log, 10, "Hello World!");
 };
 
 
@@ -168,7 +171,7 @@ for (let i = 0; i < arr.length; i++) {
         fail.push(arr[i]);
     }
 }
-return {fail: fail, pass: pass}
+return { pass: pass, fail: fail}
 };
 
 
