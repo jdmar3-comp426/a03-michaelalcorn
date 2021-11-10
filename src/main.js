@@ -14,5 +14,7 @@ import{
 // console.log(results);
 
 import {
+    repeat,
     repeatDemo
 } from "./spicy/spicy_9.js"
+repeat(repeatDemo, 10, []);

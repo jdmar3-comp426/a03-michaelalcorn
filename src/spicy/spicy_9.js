@@ -28,7 +28,7 @@ return answer;
  *   10 times.
  */
 export const repeatDemo = () => {
-    repeat(console.log(), 10, "Hello, world!");
+    console.log("Hello World!");
 };
 
 
@@ -45,7 +45,10 @@ export const repeatDemo = () => {
  *   product of num1 and num2.
  */
 export const multiplyBy = (num1) => {
-
+    function multiply2 (num2) {
+       return num1*num2
+    }
+    return multiply2;
 };
 
 
