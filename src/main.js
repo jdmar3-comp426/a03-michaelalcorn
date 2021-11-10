@@ -10,5 +10,9 @@ import{
     searchByYear
 } from "./medium/medium_3.js"
 
-console.log(searchByYear(mpg_data,[2009,2010]));
+// console.log(searchByYear(mpg_data,[2009,2010]));
 // console.log(results);
+
+import {
+    repeatDemo
+} from "./spicy/spicy_9.js"
