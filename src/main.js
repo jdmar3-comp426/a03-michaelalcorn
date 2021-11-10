@@ -18,9 +18,12 @@ import {
     repeatDemo,
     multiplyBy,
     tenTimes,
-    tenTimesFifty
+    tenTimesFifty,
+    someEven,
+    everyEven
 } from "./spicy/spicy_9.js"
-//repeat(repeatDemo, 10, []);
+repeatDemo;
 // console.log(multiplyBy(3)(5));
 // console.log(tenTimes(9));
-console.log(tenTimesFifty())
+// console.log(tenTimesFifty())
+// console.log(everyEven([1, 1, 0, 1, 1], x => x === 1))
