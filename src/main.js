@@ -15,6 +15,12 @@ import{
 
 import {
     repeat,
-    repeatDemo
+    repeatDemo,
+    multiplyBy,
+    tenTimes,
+    tenTimesFifty
 } from "./spicy/spicy_9.js"
-repeat(repeatDemo, 10, []);
+//repeat(repeatDemo, 10, []);
+// console.log(multiplyBy(3)(5));
+// console.log(tenTimes(9));
+console.log(tenTimesFifty())
