@@ -1,7 +1,8 @@
 import mpg_data from "./medium/data/mpg_data.js";
 import{
     allCarStats,
-    hybrids
+    hybrids, 
+    // results,
 }from "./medium/medium_2.js"
 
 import{
@@ -9,4 +10,5 @@ import{
     searchByYear
 } from "./medium/medium_3.js"
 
-console.log(searchByYear(mpg_data,[]));
+console.log(searchByYear(mpg_data,[2009,2010]));
+// console.log(results);

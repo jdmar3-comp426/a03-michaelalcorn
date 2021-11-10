@@ -71,7 +71,20 @@ export const allCarStats = {
  **/
 // filter out hybrids
 export const hybrids = mpg_data.filter(car => car.hybrid);
-
+let result = [];
+/*
+for (let i = 0; i < hybrids.length; i++){
+    if (result.length != 0) {
+    for (let n = 0; n < result.length; n++) {
+        if (hybrids[i].make == result[i].make) {
+            break;
+        } 
+    }
+}
+    result.push({make: hybrids[i].make});
+}
+export const results = result;
+*/
 /**
  *
  * @param {moreStats.avgMpgByYearAndHybrid} Object where keys are years and each year
