@@ -19,10 +19,28 @@ see under the methods section
  *
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
+let total_city_mpgs = 0;
+for (let i = 0; i < mpg_data.length; i++) {
+    total_city_mpgs += (mpg_data[i].city_mpg);
+}
+let total_highway_mpgs = 0;
+for (let i = 0; i < mpg_data.length; i++) {
+    total_highway_mpgs += (mpg_data[i].highway_mpg);
+}
+let years = [];
+for (let i = 0; i < mpg_data.length; i++) {
+    years.push(mpg_data[i].year);
+}
+let hybridAmount = 0;
+for (let i = 0; i < mpg_data.length; i++) {
+    if (mpg_data[i].hybrid){
+        hybridAmount++;
+    }
+}
 export const allCarStats = {
-    avgMpg: undefined,
-    allYearStats: undefined,
-    ratioHybrids: undefined,
+    avgMpg: {city: (total_city_mpgs / mpg_data.length), highway: (total_highway_mpgs / mpg_data.length)},
+    allYearStats: getStatistics(years),
+    ratioHybrids: (hybridAmount / mpg_data.length),
 };
 
 
@@ -49,9 +67,25 @@ export const allCarStats = {
  *       "2011 BMW ActiveHybrid 750Li Sedan"
  *     ]
  *}]
- *
- *
- *
+ *  
+ **/
+// filter out hybrids
+export const hybrids = mpg_data.filter(car => car.hybrid);
+let result = [];
+/*
+for (let i = 0; i < hybrids.length; i++){
+    if (result.length != 0) {
+    for (let n = 0; n < result.length; n++) {
+        if (hybrids[i].make == result[i].make) {
+            break;
+        } 
+    }
+}
+    result.push({make: hybrids[i].make});
+}
+export const results = result;
+*/
+/**
  *
  * @param {moreStats.avgMpgByYearAndHybrid} Object where keys are years and each year
  * an object with keys for `hybrid` and `notHybrid`. The hybrid and notHybrid
